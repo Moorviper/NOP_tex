@@ -1,0 +1,155 @@
+% arara: lualatex: { shell: yes, action: nonstopmode, synctex: yes}
+% arara: lualatex: { shell: yes, action: nonstopmode, synctex: yes}
+% asarara: lualatex: { shell: yes, action: nonstopmode, synctex: yes,  options: "-output-directory=_build"}
+% asarara: lualatex: { shell: yes, action: nonstopmode, synctex: yes,  options: "-output-directory=_build"}
+\documentclass[landscape]{article}
+\usepackage[ngerman]{babel}
+\usepackage[no-math]{fontspec}
+
+\usepackage{mwe}
+\usepackage{luacode}
+\usepackage{shellesc}
+% \documentclassw[11pt, a4paper,ngerman]{article}
+\usepackage{basicff}
+
+\usetikzlibrary{patterns} % preamble
+\tcbuselibrary{skins} % preamble
+
+\usepackage{tikz}
+% \usepackage{PTSansNarrow}
+\usetikzlibrary{matrix}
+
+\usepackage{pgfplots}
+\pgfplotsset{
+ compat=newest
+  }
+\tcbset{colframe=red!75!black}
+\newenvironment{proggen}{\begin{center}}{\end{center}}
+
+\usepackage{array}
+% \setmainfont[Path=/Applications/Microsoft Word.app/Contents/Resources/Fonts/]{Calibri.ttf}
+% \setsansfont[Path=/Applications/Microsoft Word.app/Contents/Resources/Fonts/]{Calibri.ttf}
+% \setmonofont[Path=/Applications/Microsoft Word.app/Contents/Resources/Fonts/]{Calibri.ttf}
+% \usepackage{datetime}
+% \pagestyle{fancy}
+
+
+\setmainfont{UbuntuL.ttf}
+\setsansfont{UbuntuR.ttf}
+\setmonofont{UbuntuMonoR.ttf}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+\oddsidemargin-10mm
+\title{
+\color{white}
+ $\bullet$ \\ $\bullet$ \\ $\bullet$ \\
+ \color{black}
+ % \color{white}
+ % $\bullet$ \\
+ \color{black}
+ NOP \\
+Luatex \\
+\color{white}
+$\bullet$ \\
+\color{black}
+ \begin{center}
+	% \includegraphics[scale=0.5]{./pictures/CaptainWarschburger.jpg}
+\end{center}
+ % \includegraphics{./pictures/wohnzimmer.png}
+}
+% \includegraphics{./pictures/asrock.png} Q1900M \\ \color{white} $\bullet$ \\ $\bullet$ \\ $\bullet$ \\ \color{black} \\ \apple \\ 10.10.3
+
+\author{Daniel Krah}
+% \rfoot{Compiled on \today\ at \currenttime}
+% \cfoot{}
+% \lfoot{Page \thepage}
+% \date{1.6.2015}
+
+\begin{document}
+\AddToShipoutPicture{\BackgroundPic}
+\maketitle%
+\newpage%
+ % \tableofcontents%
+% \newpage
+%==================================================================================
+% \begin{center}
+% \textbf{Vorwort}
+% \end{center}
+
+
+
+%
+% \input{hardware.tex}
+
+
+
+
+
+
+
+%  To Do
+% \input{todo.tex}
+\newpage
+% \section{Überblick}
+
+
+% \begin{displaymath}
+%   E = \frac{m_{0} c^{2}}{\sqrt{1-v^{2}/c^{2}}}
+% \end{displaymath}
+
+% \begin{luacode}
+%   for x=1,600 do
+%     tex.print(x+2)
+%   end
+% \end{luacode}
+\input{kap0.tex}
+% \input{kap1.tex}
+
+
+
+% \input{dummy.tex}
+% \input{dummy.tex}
+% \input{dummy.tex}
+% \input{dummy.tex}
+
+% \input{prog1.tex}
+
+
+
+%  die beiden unteren beiden includen
+
+% \input{kap1_vorl.tex}
+% \input{kap2_vorl.tex}
+% \input{kap3_vorl.tex}
+% \input{kap4_vorl.tex}
+% \input{kap5_vorl.tex}
+% \input{kap6_vorl.tex}
+% kapitel 7 im Buch
+
+%   Kapitel 2
+
+% \input{2ndKap7.tex}
+
+
+
+
+%==============================================
+
+% % programmieren 2
+
+% \input{kap8.tex}
+% \input{kap9.tex}
+% \input{kap10.tex}
+% \input{kap11.tex}
+% \input{kap12.tex}
+% \input{last.tex}
+% \input{einfuerung.tex}
+
+
+
+
+%=========================================================================================================================
+%
+%-------------END
+\end{document}
