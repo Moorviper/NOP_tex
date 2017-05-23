@@ -12,13 +12,13 @@ before_install:
 - chmod +x install-tex.sh tlmgr.sh
 install:
 - . ./install-tex.sh- ./tlmgr.sh update --self --all || echo "ignore errors"
+script:
 - tlmgr init-usertree
 - tlmgr install arara
 - mkdir _build
 - ./tlmgr.sh --version
 - ./tlmgr.sh update --self --all || echo "ignore errors"
 - ./tlmgr.sh install collection-langgerman
-script:
 - arara nopTex.tex -v
 - arara nopTex.tex -v
 deploy:
