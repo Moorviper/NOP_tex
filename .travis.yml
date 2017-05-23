@@ -5,13 +5,13 @@ os: osx
 osx_image: xcode8.2
 sudo: false
 language: generic
+before_install:
+  - wget https://raw.githubusercontent.com/y-yu/install-tex-travis/master/install-tex.sh
+  - wget https://raw.githubusercontent.com/y-yu/install-tex-travis/master/tlmgr.sh
+  - chmod +x install-tex.sh tlmgr.sh
 install:
   - . ./install-tex.sh
-
-before_install:
-- chmod +x install-tex.sh tlmgr.sh
-install:
-- . ./install-tex.sh- ./tlmgr.sh update --self --all || echo "ignore errors"
+  - ./tlmgr.sh update --self --all || echo "ignore errors"
 script:
 - tlmgr init-usertree
 - tlmgr install arara
