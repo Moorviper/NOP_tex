@@ -1,7 +1,5 @@
 % arara: lualatex: { shell: yes, action: nonstopmode, synctex: yes}
 % arara: lualatex: { shell: yes, action: nonstopmode, synctex: yes}
-% asarara: lualatex: { shell: yes, action: nonstopmode, synctex: yes,  options: "-output-directory=_build"}
-% asarara: lualatex: { shell: yes, action: nonstopmode, synctex: yes,  options: "-output-directory=_build"}
 \documentclass[landscape]{article}
 \usepackage[ngerman]{babel}
 \usepackage[no-math]{fontspec}
@@ -11,6 +9,9 @@
 \usepackage{shellesc}
 % \documentclassw[11pt, a4paper,ngerman]{article}
 \usepackage{basicff}
+\usepackage{sectsty}
+\usepackage{adjustbox} % minipage top allign
+\usepackage{subfigure} % Bilder nebeneinander darstellen
 
 \usetikzlibrary{patterns} % preamble
 \tcbuselibrary{skins} % preamble
@@ -43,19 +44,22 @@
 \oddsidemargin-10mm
 \title{
 \color{white}
- $\bullet$ \\ $\bullet$ \\ $\bullet$ \\
+\begin{center}
+ \includegraphics[scale=1.0]{./pictures/NoPLogo.png}
+\end{center}
+ $\bullet$ \\
+ % $\bullet$ \\ $\bullet$ \\
  \color{black}
  % \color{white}
  % $\bullet$ \\
  \color{black}
- NOP \\
-Luatex \\
+ TeX-Dokumente automatisiert \\mit \\GitHub und Travis-CI \\bauen \\
 \color{white}
 $\bullet$ \\
 \color{black}
- \begin{center}
-	% \includegraphics[scale=0.5]{./pictures/CaptainWarschburger.jpg}
-\end{center}
+%  \begin{center}
+% 	\includegraphics[scale=0.5]{./pictures/NoPLogo.png}
+% \end{center}
  % \includegraphics{./pictures/wohnzimmer.png}
 }
 % \includegraphics{./pictures/asrock.png} Q1900M \\ \color{white} $\bullet$ \\ $\bullet$ \\ $\bullet$ \\ \color{black} \\ \apple \\ 10.10.3
@@ -67,9 +71,18 @@ $\bullet$ \\
 % \date{1.6.2015}
 
 \begin{document}
+\huge
+
+
+\sectionfont{\Huge}
+\subsectionfont{\Huge}
+\subsubsectionfont{\Huge}
+\paragraphfont{\Huge}
+
+
 \AddToShipoutPicture{\BackgroundPic}
 \maketitle%
-\newpage%
+% \newpage%
  % \tableofcontents%
 % \newpage
 %==================================================================================
@@ -84,9 +97,12 @@ $\bullet$ \\
 
 
 
-
-
-
+% \begin{itemize}
+% \item test
+% \item Deine Mudda
+% \end{itemize}
+%
+% gh
 
 %  To Do
 % \input{todo.tex}
@@ -103,7 +119,11 @@ $\bullet$ \\
 %     tex.print(x+2)
 %   end
 % \end{luacode}
-\input{kap0.tex}
+\input{kap0.tex}  %  Warum Latex
+\input{kap1.tex}    % Latex the PDF LAtex way
+\input{kap2.tex}    % travis yml
+\input{kap3.tex}  %  ARARA LUATEX
+
 % \input{kap1.tex}
 
 
