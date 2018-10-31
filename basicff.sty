@@ -443,3 +443,9 @@
 
 
 \newcommand{\FFCommunity}{fulda.freifunk.net}
+
+\renewcommand{\textbf}[1]{%
+    \pdfliteral direct {2 Tr 1.5 w} %the second factor is the boldness
+     #1%
+    \pdfliteral direct {0 Tr 0 w}%
+}
